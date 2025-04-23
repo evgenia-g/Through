@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Through that</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta https-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style0.css" />
+    <style>
+      #zoom_outer div{
+        position: absolute;
+      }
+      .zoom img{
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;  
+      }
+
+      #intro{
+        box-sizing: border-box;
+        padding: 5%;
+        padding-bottom: 20%;
+      }
+      #text, #text1{
+        display: table;
+        text-align: justify;
+        transform: scale(0.96) translate(0px, 0px);
+        position: absolute; 
+        overflow: auto;
+        color: #637170;
+      }
+
+      #text1{
+        text-align: center;
+        color:#a2a2a2;
+      }
+
+      .modal-body{
+        margin-bottom: 10%;
+        padding: 2%;
+        width: 50%;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10%;
+        transform: scale(0.86) translate(0px, 0px);
+        /*background-color: white;*/
+        border-style: double;
+        border-color: #a2a2a2;
+        overflow: hidden;
+      }
+
+      .zoom{
+        height: 100%;
+      }
+
+      #crysVideo{
+        height: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:auto;
+      }
+
+      #directions{
+        font-size: 18px;
+      }
+
+      #d1{
+        font-size: 19px;
+        text-align: center;
+        color:#a2a2a2;
+      }
+      
+
+      @media all and (max-width: 991px){
+        #intro{
+          visibility: hidden;
+        }
+        #permission{
+          visibility: visible;
+        }
+      }
+
+      @media all and (min-width: 991px) {
+        #intro{
+          visibility: visible;
+        }
+        #permission{
+          visibility: hidden;
+        }
+      } 
+    </style>
+  </head>
+  <body>
+    <video id="video" loop muted crossOrigin="anonymous" playsinline style="display:none">
+      <source src="http://localhost:8000/P1070070.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+    </video>
+    
+    <div id="bck">
+    </div>
+    <div id="zoom_outer">
+      <div id="cVideodiv" style="z-index: -2;">
+        <video id="crysVideo" style="box-shadow: black 0 0 5px;" muted  loop crossOrigin="anonymous">
+          <source src="http://localhost:8000/P1070070.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        </video>
+      
+      </div>
+      <div id="intro">
+        <div class="modal-body" style="z-index: 10;"class="col-3">
+          <div id="text"class="col-3" >
+            <br>
+              <a href="index.html"> Through</a><br>
+            <br>
+            <!-- <br>Στην πτυχιακή μορφοποιείται μία θεωρία σύμφωνα με την οποία η επανάληψη μιας επιτηδευμένης κίνησης ή ενός αισθητηριακού ερεθίσματος μέσα στην επιρροή που ασκεί το εκάστοτε περιβάλλον δημιουργεί μια σειρά από γεγονότα που κρίνουν, τελικά, μέσω του ελέγχου μιας σειράς ρυθμών, τη μεταβολή της νοητικής απόστασης του περιπατητή από την αισθητηριακότητα της πραγματικότητας. 
+            Και είναι αυτός ο παράγοντας που όταν διαμορφώνεται και εξελίσσεται κατά συγκεκριμένους τρόπους συνιστά ένα είδος συγκέντρωσης.
+            <br>
+            <br><br> <br>Περιγραφή<br>
+            Yπάρχουν τρία είδη κινήσεων στο χώρο. 
+            Το πρώτο είδος εκτελείται μέσω της περιστροφής χαρτών που αποτελούν κατόψεις από περιπάτους που έχω πραγματοποιήσει εγώ σε αστικό περιβάλλον και το δεύτερο είναι αυτό που εκτελούν στοιχεία τα οποία βρίσκονται σε μία σφαίρα μέσα από την οποία παρατηρεί ο χρήστης το περιβάλλον, όταν ο ίδιος βρίσκεται σε αδράνεια. Τα δύο αυτά συμβαίνουν αυτόνομα και δίχως τέλος, ενώ υπάρχει και ένα τρίτο είδος κίνησης που συμβαίνει μέσω της διάδρασης του επισκέπτη με τον εικονικό χώρο. 
+            Οι κινήσεις που περιγράφονται από το δεύτερο είδος, επηρεάζονται από αυτές του πρώτου και του τρίτου, με αποτέλεσμα τα στοιχεία μέσα στη σφαίρα από την οποία παρατηρεί ο χρήστης το περιβάλλον, να κινούνται κατά ομάδες και να σχηματίζονται μοτίβα τα οποία έχουν μία διαρκή ροή. Όταν δημιουργηθούν συνθήκες τέτοιες ώστε όλα τα στοιχεία να βρίσκονται στο ίδιο επίπεδο που ορίζεται από το σημείο 0 του άξονα x της σφαίρας, προβάλλεται ένα βίντεο για 100 ms. 
+            Αν, ταυτόχρονα, με την τελευταία συνθήκη ισχύει και ότι τα στοιχεία έχουν σχηματίσει μία ή δύο ομάδες και αυτό επαναληφθεί συγκεκριμένες φορές κατά τη διάρκεια οριοθετημένου χρονικού διαστήματος προβολής του βίντεο από τη στιγμή που έγινε το τελευταίο κλικ του χρήστη, παράγεται ένα συγκεκριμένο ζωγραφικό έργο. Αντίστοιχα, αν οι ομάδες είναι τρεις, τέσσερις ή πέντε και αυτό γίνει, επίσης, επαναλαμβανόμενα σε ένα οριοθετημένο χρονικό διάστημα προβολής του βίντεο από το τελευταίο κλικ του χρήστη, παράγεται ένα άλλο έργο. Στην περίπτωση που οι ομάδες ανέλθουν μία φορά σε έξη ή επτά, παράγεται ένα τρίτο έργο. 
+            Το εκάστοτε έργο όταν εμφανιστεί μπορεί να μεγεθυνθεί ή να σμικρυνθεί και να μετακινηθεί σε οποιοδήποτε σημείο της οθόνης. Καθένα από αυτά τα έργα αντιστοιχεί σε ένα από τα εξής τρία χαρακτηριστικά του περπατήματος που κάνουν το ίδιο να βοηθά στη συγκέντρωση: την αύξηση της σωματικής δραστηριότητας, την εκτέλεση μίας επαναλαμβανόμενης κίνησης και την εναλλαγή ερεθισμάτων από το εξωτερικό περιβάλλον.
+            Ταυτόχρονα, μέσα από αυτά, το περπάτημα αντιμετωπίζεται ως ένας μηχανισμός, ως ένας ρυθμός ή ως μία κατάσταση επικοινωνίας περιπατητή - περιβάλλοντος. Όταν οι συνθήκες που δημιούργησαν ένα έργο επέλθουν ξανά, τότε το εν λόγω έργο αντικαθίσταται από μία τροποποιημένη του έκδοση, ενώ σε βάθος χρόνου η θέση αυτή φιλοξενεί εναλλασσόμενα τα δύο έργα.
+            <br><br><br><p id="directions">
+              Οδηγίες
+              <br>Εξερεύνησε και περιεργάσου τον χώρο. Δοκίμασε διαφορετικούς ρυθμούς αλληλεπίδρασης με αυτόν και θα εμφανιστούν τα 3 έργα. 
+              <br><br><p id="d1">Μετακίνηση: Αριστερό κλικ 
+              <br>Περιστροφή:&#x21e6; &#x21e7; &#x21e9; &#x21e8;
+              <br>Μεγέθυνση/Σμίκρυνση: Scroll</p>
+            </p> -->
+            <br>This interactive project explores how repetitive movement and sensory experiences influence shifts in mental states. 
+            Drawing inspiration from the ambient, meditative nature of walking and the atmospheric qualities of 1990s experimental electronic music, the artwork evokes a sense of rhythm and immersion.
+            <br>There are three types of movement within the space.
+The first type occurs through the rotation of maps representing floor plans of walks I have taken in urban environment. 
+The second type involves elements that move within the sphere from which the user observes the environment while remaining idle.
+These two movements unfold autonomously and endlessly. 
+The third type of movement, however, is triggered by the user’s interaction with the virtual space. 
+The second type of movement is influenced by both the first and third, causing the elements within the sphere to move in groups and form continuously flowing patterns.
+When specific patterns emerge, a corresponding artwork is generated. This artwork can then be resized and repositioned anywhere on the screen. 
+If the conditions that produced an artwork reoccur, the artwork is replaced by a modified version of itself. Over time, this position alternates between two evolving variations of the piece.
+Through this process, walking is explored as a mechanism, a rhythm, and an experience that shapes the walker's perception and interaction with their environment.
+            <br><br><br><p id="directions">
+              Directions:
+              Explore and interact with the space. Try different rhythms of engagement, and artworks will emerge.
+              <br><br><p id="d1">Move: Left click
+              <br>Rotate: &#x21e6; &#x21e7; &#x21e9; &#x21e8;
+              <br>Zoom in/out: Scroll</p>
+            </p>
+
+          </div>
+        </div>
+      </div>
+      <div id="permission">
+        <!-- <div class="modal-body" style="z-index: 10;"class="col-3"> -->
+          <div id="text1"class="col-3" >
+            <br>
+            --Το έργο είναι διαθέσιμο μόνο σε desktop ή laptop--
+ 		        <br>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAF_S1jz5gZ9tw0sECnKWxSAF-0OAvpZHQ"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://threejs.org/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module">
+
+      import * as THREE from 'three';
+      import { FlyControls } from 'https://threejs.org/examples/jsm/controls/FlyControls.js';
+      var scale = [1,1],
+        panning = [false,false,false],
+        pointX = [0,0],
+        pointY = [0,0],
+        start =[{ x: 0, y: 0 }, { x: 0, y: 0 }],
+        zoom,
+        zoomable,
+        paintgs=[],
+        pouf=0,
+        n=0,
+        lastmd=0,
+        loop=[0,0,0,0];
+      var width, height, lmarg, tmarg;
+      var k=0;
+      var gsff;
+      var gf;
+      let controls;
+
+      zoom = document.querySelectorAll('.zoom');
+      zoomable = document.getElementById("zoomable");
+      document.getElementById("crysVideo").defaultPlaybackRate = 1.0;
+      document.getElementById("intro").onclick= function (e){
+        this.remove();
+      } 
+
+      if(window.innerWidth > 1.777*window.innerHeight){
+        document.getElementById("crysVideo").style.width ="100%";
+        document.getElementById("crysVideo").style.height ="auto";
+      }
+
+      function reportWindowSize(){
+        if(window.innerWidth > 1.777*window.innerHeight){
+          document.getElementById("crysVideo").style.width ="100%";
+          document.getElementById("crysVideo").style.height ="auto";
+        }else{
+          document.getElementById("crysVideo").style.height ="100%";
+          document.getElementById("crysVideo").style.width ="auto";
+        }
+      }
+
+      window.onresize = reportWindowSize;
+
+      for(k=0;k<4;k++){
+        paintgs.push(["http://localhost:8000/"+String(k+1)+"a.png","http://localhost:8000/"+String(k+1)+"b.png"]);
+      }
+      
+
+      function setTransform(aw) {
+        zoomable.style.transform = "translate(" + pointX[aw] + "px, " + pointY[aw] + "px) scale(" + scale[aw] + ")";
+      }
+
+      function md(e,dsd) {
+        e.preventDefault();
+        start[dsd]= { x: e.clientX - pointX[dsd], y: e.clientY - pointY[dsd] };
+        pouf =0;
+        panning[dsd] = true;
+        loop=[0,0,0,0];
+      }
+
+      function mu(e,hb) {
+        panning[hb] = false;
+        
+      }
+
+      function mm(e,gjg) {
+        e.preventDefault();
+        if (!panning[gjg]) {
+          return;
+        }
+        pointX[gjg] = (e.clientX - start[gjg].x);
+        pointY[gjg] = (e.clientY - start[gjg].y);
+        setTransform(gjg);
+      }
+
+      function w(e,v) {
+        e.preventDefault();
+        var xs = (e.clientX - pointX[v]) / scale[v],
+          ys = (e.clientY - pointY[v]) / scale[v],
+          delta = (e.wheelDelta ? e.wheelDelta : -e.deltaY);
+        (delta > 0) ? (scale[v] *= 1.2) : (scale[v] /= 1.2);
+        pointX[v] = e.clientX - xs * scale[v];
+        pointY[v] = e.clientY - ys * scale[v];
+
+
+        setTransform(v);
+      }
+
+    function zzoom(g) {
+      zoomable.onmousedown =function (e){
+        md(e,g);
+      } 
+      zoomable.onmouseup =function (e){
+        mu(e,g);
+      } 
+      zoomable.onmousemove = function (e){
+        mm(e,g); 
+      }
+      zoomable.onwheel =function (e){
+        w(e,g);
+      }
+    }
+
+    function ccl(a){
+        zoomable.style.zIndex= a.style.zIndex;
+        zoomable.removeAttribute('id');
+        a.setAttribute('id','zoomable');
+        zoomable = document.getElementById("zoomable");
+        var l=zoom.length-1;
+        while(a!=zoom[l]){
+          if(Number(zoom[l].style.zIndex)-1>=0){
+            zoom[l].style.zIndex=String(Number(zoom[l].style.zIndex)-1);
+          }
+          l--;
+        }
+        a.style.zIndex=String(zoom.length);
+        zzoom(l);
+    }
+
+
+      $(zoom).hover( function(e) {
+        ccl(this);
+      } ); 
+
+      var errorHandler = function (errorObj) { 
+      alert(errorObj.code + ": " + errorObj.message); 
+
+      }; 
+      function getRndInteger(min, max) {
+        return Math.floor(Math.random() * (max - min) ) + min;
+      }
+
+
+
+
+
+
+
+
+////                                                                                        THREE js staff
+
+
+
+
+
+
+var fieldOfView = 75;
+var aspectRatio = window.innerWidth / window.innerHeight;
+var nearPlane = 0.1;
+var farPlane = 1000;
+var fdxy=0;
+var distnc=0.65;
+var fs=0;
+var ins;
+
+var scene0 = new THREE.Scene();
+
+var camera = new THREE.PerspectiveCamera(
+  fieldOfView, aspectRatio, nearPlane, farPlane
+);
+
+scene0.background = new THREE.Color( 0x2b3533 ); 
+scene0.fog = new THREE.FogExp2( 0x2b3533 , 0.0075 );
+
+var renderer = new THREE.WebGLRenderer({antialias: true});
+renderer.setSize( window.innerWidth, window.innerHeight );
+
+document.getElementById("bck").appendChild( renderer.domElement );
+
+var material = new THREE.MeshBasicMaterial( {
+side: THREE.DoubleSide
+, transparent: true, opacity: 0.01} );
+var geometry = new THREE.SphereGeometry(1);
+var zoomer = new THREE.Mesh(geometry, material);
+
+zoomer.position.set(0,0,0);
+
+scene0.add(zoomer);
+
+
+controls = new FlyControls( camera, zoomer );
+controls.dragToLook=false;
+controls.movementSpeed = 0;
+controls.rollSpeed= Math.PI/6;
+controls.autoForward = false;
+
+
+/**e0e0e0
+* Renderer
+001800 003200 475927 003100 303030 c3cbdb
+**/
+
+
+
+var loader = new THREE.TextureLoader();
+var mesharr=[];
+var meshvell=[];
+var inzoomer=[];
+var updateFcts = [];
+var velo = 0.012;
+var strt=0;
+var b, n ,j,i;
+var bimn=["01","02","03","05","09","10","11","14", "37","38","39","40","43","44","46","47","48","49","50","52"];
+
+var m=[];
+var k=[];
+var v=[];
+var fa=[];
+fa.push([camera.position.x,camera.position.y,camera.position.z]);
+
+var videoImage, videoImageContext;
+const worldWidth = 256, worldDepth = 256;
+const clock = new THREE.Clock();
+
+const video = document.getElementById("video");
+
+
+for(n=1;n<5;n++){
+    b=97;
+    while (b<105){
+        insidezoomer("http://localhost:8000/maps/"+n + String.fromCharCode(b) +".png");
+        b++;
+    }
+}
+
+for(i=0;i<11;i++){
+    bckmaps("http://localhost:8000/maps/bck_"+bimn[i]+".png");
+}
+
+
+
+//                                  video surface
+
+
+const textrv = new THREE.VideoTexture( video );
+textrv.format = THREE.RGBAFormat;
+
+videoImage = document.createElement('canvas');
+videoImage.width = 320;
+videoImage.height = 240;
+
+//video 1
+
+videoImageContext = videoImage.getContext('2d');
+videoImageContext.fillStyle = '#000000';
+videoImageContext.fillRect(0, 0, videoImage.width, videoImage.height);
+
+var texture = new THREE.Texture(textrv);
+texture.minFilter = THREE.LinearFilter;
+texture.magFilter = THREE.LinearFilter; 
+texture.needsUpdate = true;
+
+texture = new THREE.Texture(videoImage);
+updateFcts.push(function(delta, now) {
+    textrv.update(delta, now)
+});
+
+
+///////////////////////////////////////
+
+var material = new THREE.MeshBasicMaterial( {
+  map: texture,
+  side: THREE.DoubleSide
+  , transparent: true} );
+/* var material = new THREE.MeshBasicMaterial( {
+  map: texture,
+  side: THREE.FrontSide
+  , transparent: true} ); */
+material.needsUpdate = true;
+var geometry = new THREE.PlaneGeometry(7500, 7500, worldWidth - 1, worldDepth - 1 );
+var mesh = new THREE.Mesh(geometry, material);
+
+mesh.position.set(0,180,0);
+mesh.rotation.x=-90;
+scene0.add(mesh);
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function onWindowResize() {
+
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize( window.innerWidth, window.innerHeight );
+
+}
+
+
+function insidezoomer( im){
+    var texture = new THREE.TextureLoader().load( im );
+    var material = new THREE.MeshBasicMaterial( {
+    map: texture,
+    side: THREE.FrontSide
+    , transparent: true
+    , alphaTest: 0.5
+    } );
+    var geometry = new THREE.BoxGeometry( .15, .15, .15 );
+    //var geometry = new THREE.PlaneGeometry(.25, .25);
+    var z = new THREE.Mesh(geometry, material);
+
+    z.position.set(zoomer.position.x -0.01* getRndInteger(-75,75),zoomer.position.y -0.01*getRndInteger(-75 ,75),zoomer.position.z-0.01*getRndInteger(-75 ,75));
+
+    inzoomer.push(z);
+    
+    
+
+    scene0.add(z);
+}
+
+for(j=0;j<inzoomer.length;j++){
+    m.push(getRndInteger(1,9));
+    k.push(getRndInteger(1,9));
+    v.push(getRndInteger(1,9));
+}
+
+
+function bckmaps( imbck){
+    /*var material = new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( imbck.src ), transparent: true})); */ 
+
+      var texture = new THREE.TextureLoader().load( imbck );
+      var material = new THREE.MeshBasicMaterial( {
+        map: texture,
+        side: THREE.DoubleSide
+      , transparent: true} );
+      var geometry = new THREE.SphereGeometry(getRndInteger(7,12)*0.1+3);
+      var mesh = new THREE.Mesh(geometry, material);
+
+      mesh.position.set( getRndInteger(-8,8),getRndInteger(-4 ,4), getRndInteger(-8 ,8));
+
+      mesh.rotateX(getRndInteger(0,360));
+      mesh.rotateY(getRndInteger(0,360));
+      mesh.rotateZ(getRndInteger(0,360));
+
+      mesharr.push(mesh);
+      meshvell.push(getRndInteger(5,20));
+
+      scene0.add(mesh);
+
+}
+
+var light1 = new THREE.PointLight( 0xffffff, 1, 0 );
+light1.position.set(0, 0, 1 );
+
+
+scene0.add(light1)
+
+
+function del_img (i, p){
+  paintgs[i].splice(paintgs[i].length+1,0,paintgs[i][0]);
+  paintgs[i].splice(0,1);
+  zoom[p].children[0].src=paintgs[i][0];
+}
+
+
+function hhh(m) {
+  const newzoom = document.createElement('div');
+  newzoom.style.zIndex=String(zoom.length+1);
+  document.getElementById("zoom_outer").appendChild(newzoom);
+  const newimg = document.createElement('img');
+  newimg.src = paintgs[m][0];
+  newzoom.appendChild(newimg);
+  scale.push(1);
+  panning.push(false);
+  pointX.push(0);
+  pointY.push(0);
+  start.push({ x: 0, y: 0});
+  newzoom.classList.add("zoom");
+  zoom = document.getElementsByClassName("zoom");
+  if (zoomable==null){
+    newzoom.setAttribute('id','zoomable');
+    zoomable = newzoom;
+  }
+  $(zoom).hover( function(e) {
+        ccl(this);
+      } ); 
+}
+
+
+
+function inzoomposition() {
+  var q1;
+  var end;
+  var time;
+  var ssss=[], kkk;
+  var i,j;
+    for(j=0; j<inzoomer.length; j++){
+        q1=[0,0,0,0];
+        if(Math.abs(inzoomer[j].position.x + Math.pow(-1, m[j]+1)*velo -zoomer.position.x) < (Math.abs(inzoomer[j].position.x + Math.pow(-1, m[j])*velo -zoomer.position.x))){
+          if(Math.abs(inzoomer[j].position.x -zoomer.position.x)>distnc){
+            m[j]= (m[j]+1)%10;
+          }
+        }
+        inzoomer[j].position.x =inzoomer[j].position.x + Math.pow(-1, m[j])*velo;
+        
+        if(Math.abs(inzoomer[j].position.y + Math.pow(-1, k[j]+1)*velo -zoomer.position.y) < (Math.abs(inzoomer[j].position.y + Math.pow(-1, k[j])*velo -zoomer.position.y))){
+          if(Math.abs(inzoomer[j].position.y -zoomer.position.y)>distnc){
+            k[j]= (k[j]+1)%10;
+          }
+        }
+        inzoomer[j].position.y =inzoomer[j].position.y + Math.pow(-1, k[j])*velo;
+
+        if(Math.abs(inzoomer[j].position.z + Math.pow(-1, v[j]+1)*velo -zoomer.position.z) < (Math.abs(inzoomer[j].position.z + Math.pow(-1, v[j])*velo -zoomer.position.z))){
+          if(Math.abs(inzoomer[j].position.z -zoomer.position.z)>distnc){
+            v[j]= (v[j]+1)%10;
+          }
+        }
+        inzoomer[j].position.z =inzoomer[j].position.z + Math.pow(-1, v[j])*velo;
+        ssss=[];
+        ssss.push([ inzoomer[j].position.x , inzoomer[j].position.y , inzoomer[j].position.z]);
+
+        for(i=0;i<inzoomer.length;i++){
+          if(Math.abs(inzoomer[i].position.x-zoomer.position.x)>0.02){
+            q1[0]=1;
+          }
+
+          
+          for(kkk=0;kkk<ssss.length;kkk++){
+            if(Math.abs(ssss[kkk][0]-inzoomer[i].position.x)>0.02 || Math.abs(ssss[kkk][1]-inzoomer[i].position.y)>0.02 ||Math.abs(ssss[kkk][2]-inzoomer[i].position.z)>0.02){  
+              ssss.push([ inzoomer[i].position.x , inzoomer[i].position.y , inzoomer[i].position.z]);
+            }
+            if(ssss.length>7){
+              q1[2]=1;
+              break;
+            }else if(ssss.length>5){
+              q1[1]=1;
+            }else if(ssss.length>2){
+              q1[3]=1;
+            }
+          }
+          
+        }
+        
+
+// 1 1 1 :-      0 1 1 :2      0 0 1 :1      0 0 0 :3
+        
+        if(q1[0]==0){
+          i=0;
+          
+          
+          end = new Date().getTime();
+          time = end - strt;
+          
+          
+          if(time>120){
+            if(time<end-lastmd){
+              loop[0]++;
+            }else{
+              loop[0]=0;
+            }
+              document.getElementById("cVideodiv").style.zIndex='0';
+              $('#crysVideo')[0].play();
+              strt =new Date().getTime();
+            var myTimeout = setTimeout(function(){
+              $('#crysVideo')[0].pause();
+              document.getElementById("cVideodiv").style.zIndex='-2';
+            }
+            , 100);
+            
+          }
+          
+
+          if (q1[3]==0 && q1[2]==0 && q1[1]==0){
+            ++loop[3];
+            if(loop[3]=50 && loop[0]>=4 ){
+              for(pouf=0;pouf<zoom.length;pouf++){
+                if(Number(zoom[pouf].children[0].src[zoom[pouf].children[0].src.length-6])==1){
+                  del_img(0,pouf);
+                  i=1;
+                  break;
+                }
+              }
+              if(i==0){
+                hhh(0);
+                loop=[0,0,0,0];
+              }
+            }
+          }
+          
+          if (q1[1]==0 && q1[3]==1){
+            ++loop[1];
+            if(loop[1]==4 && loop[0]<=3){
+              i=0;
+              for(pouf=0;pouf<zoom.length;pouf++){
+                if(Number(zoom[pouf].children[0].src[zoom[pouf].children[0].src.length-6])==2){
+                  del_img(1,pouf);
+                  i=1;
+                  break;
+                }
+              }
+              if(i==0){
+                hhh(1);
+                loop=[0,0,0,0];
+              }
+            }
+          }
+
+          if (q1[1]==1 && q1[2]==0){
+            ++loop[2];
+            if(loop[2]==1 ){
+              i=0;
+              for(pouf=0;pouf<zoom.length;pouf++){
+                if(Number(zoom[pouf].children[0].src[zoom[pouf].children[0].src.length-6])==3){
+                  del_img(2,pouf);
+                  i=1;
+                  break;
+                }
+                
+              }
+              if(i==0){
+                hhh(2);
+                loop=[0,0,0,0];
+              }
+            }
+          }
+
+        }
+
+        
+        
+    }
+}
+
+
+function controlvelo(){
+  var vel=[];
+  var  v=0;
+  velo=0.012;
+  for (i=0;i<mesharr.length;i++){
+    if(Math.abs(mesharr[i].position.x-zoomer.position.x)<=(mesharr[i].geometry.parameters.radius-1) &&Math.abs(mesharr[i].position.y-zoomer.position.y)<=(mesharr[i].geometry.parameters.radius-1) && (mesharr[i].position.z-zoomer.position.z)<=(mesharr[i].geometry.parameters.radius-1)){
+      vel.push(0.001 *meshvell[i]);
+      v+=vel[vel.length -1];
+    }
+  }
+  velo=0.012*(vel.length+1)-v;
+  if(velo<0.005){
+    velo = 0.005;
+  }
+}
+
+
+  document.getElementById("bck").onclick = function (e){
+    e.preventDefault();
+    video.play();
+    velo=0.012;
+    fdxy=10;
+    lastmd =new Date().getTime();
+    distnc=0;
+    loop=[0,0,0,0];
+    for(i=0;i<inzoomer.length;i++){
+      inzoomer[i].material.alphaTest = 0;
+    }
+  }
+
+
+
+window.addEventListener( 'resize', onWindowResize );
+
+
+
+var rotation = new THREE.Euler();
+var quaternion1 = new THREE.Quaternion();
+var vectorpos = new THREE.Vector3();
+
+var direction = new THREE.Vector3();
+
+function animate() {
+  const delta = clock.getDelta();
+    var i;
+    requestAnimationFrame( animate );
+    for (i=0;i<mesharr.length;i++){
+        mesharr[i].rotation.x += 0.001*meshvell[i];
+        mesharr[i].rotation.y += 0.001*meshvell[i];
+        mesharr[i].rotation.z += 0.001*meshvell[i];
+    } 
+    inzoomposition();
+    if (fdxy>0){
+      
+      camera.getWorldDirection( direction );
+      camera.position.sub( direction.multiplyScalar(fdxy*0.02) );
+
+        camera.updateMatrixWorld( true );
+        
+        distnc+=0.012;
+        light1.position.z = camera.position.z+1;
+        fa.push([camera.position.x,camera.position.y,camera.position.z]);
+        fdxy-=0.2;
+    }
+     else if( fa.length!=0 ){
+        camera.position.x =fa[fa.length-1][0];
+        camera.position.y =fa[fa.length-1][1];
+        camera.position.z =fa[fa.length-1][2];
+        fa.pop();
+    }
+     else if (camera.position.z!=zoomer.position.z){
+        camera.position.z = zoomer.position.z;
+        camera.position.x = zoomer.position.x;
+        camera.position.y = zoomer.position.y;
+        for(i=0;i<inzoomer.length;i++){
+          inzoomer[i].material.alphaTest = 0.5;
+        }
+        fs = 6;
+    }
+    else if(camera.position.z==zoomer.position.z && fs>0 ){
+      camera.updateMatrixWorld( true );
+        camera.getWorldQuaternion(quaternion1);
+        quaternion1.normalize();
+        rotation.setFromQuaternion( quaternion1, 'XYZ');
+        fs -= 0.2;
+
+        camera.getWorldDirection( direction );
+      
+
+        if(Math.abs(camera.position.z- fs*0.02* Math.cos(rotation.y) *Math.cos(rotation.x))<=10 && Math.abs(camera.position.x -  fs*0.02*Math.sin(rotation.y))<=10 && Math.abs(camera.position.y +  fs* 0.02*Math.sin(rotation.x))<= 6){
+          camera.position.add( direction.multiplyScalar(fs*0.02) );
+          
+          zoomer.position.set(camera.position.x,camera.position.y,camera.position.z) ;
+        }
+        
+        controlvelo();
+    }
+    else {
+        fdxy=0;
+        fs =0;
+        if (camera.position.y>=200)
+        cont();
+    }
+
+   
+    if (video.readyState === video.HAVE_ENOUGH_DATA) {
+        videoImageContext.drawImage(video, 0, 0);
+        if (textrv)
+        texture.needsUpdate = true; 
+    }
+
+    controls.update( delta );
+    renderer.render( scene0, camera );
+}
+animate();
+
+		</script>
+	</body>
+</html>
