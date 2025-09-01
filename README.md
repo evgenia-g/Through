@@ -23,6 +23,8 @@ Explore and interact with the space. Try different rhythms of engagement, and ar
 
 
 ## Installation
-1. Clone the repository  
+1. Clone the repository
+2. Run the server.py file  
    ```bash
-   git clone https://github.com/YOUR_USERNAME/through.git
+   python server.py
+3. Open the through.html in your browser.
