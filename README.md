@@ -17,9 +17,9 @@ Through this process, walking is explored as a mechanism, a rhythm, and an exper
 
 ## Directions
 Explore and interact with the space. Try different rhythms of engagement, and artworks will emerge.
-Move: Left click
-Rotate: &#x21e6; &#x21e7; &#x21e9; &#x21e8;
-Zoom in/out: Scroll
+- Move: Left click
+- Rotate: &#x21e6; &#x21e7; &#x21e9; &#x21e8;
+- Zoom in/out: Scroll
 
 
 ## Installation
